@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffd1dc, #b2f7ef);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .wallet-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .wallet-container h1 {
+            color: orange;
+        }
+        .wallet-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .wallet-container button {
+            background: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .wallet-container button:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div class="wallet-container">
+        <h1>Your <span style="color: orange;">Wallet</span></h1>
+        <p id="wallet-balance">0</p>
+        <input type="number" id="add-money" placeholder="Add Money" />
+        <button onclick="addMoney()">Add Money</button>
+    </div>
+
+    <script>
+        let walletBalance = 0;
+
+        function addMoney() {
+            const inputField = document.getElementById('add-money');
+            const amount = parseFloat(inputField.value);
+
+            if (!isNaN(amount) && amount > 0) {
+                walletBalance += amount;
+                document.getElementById('wallet-balance').textContent = walletBalance;
+
+                // Alert to confirm addition and redirect
+                alert(`₹${amount} added successfully! Redirecting to the home page...`);
+
+                // Redirect to the specified home page after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "file:///C:/Users/Man%20Sathavara/OneDrive/Desktop/Moms%20kitchn%20main%20folder/RealFoodApp/index.html";
+                }, 2000);
+            } else {
+                alert('Please enter a valid amount.');
+            }
+        }
+    </script>
+</body>
+</html>

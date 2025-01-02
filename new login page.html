@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Login and Signup</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c2c2c, #e0e0e0);
+        }
+
+        .container {
+            perspective: 1000px;
+            width: 400px;
+        }
+
+        .card {
+            width: 100%;
+            height: 550px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .form-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: #1a1a1a;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #666;
+            border-radius: 4px;
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: linear-gradient(90deg, #444, #aaa);
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .form-container button:hover {
+            background: linear-gradient(90deg, #333, #888);
+        }
+        .form-group .toggle-password {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .google-button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #888;
+            background: #fff;
+            color: #000;
+            font-size: 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .signup {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card">
+            <!-- Login Form -->
+            <div class="form-container login">
+                <h2>Login</h2>
+                <input type="text" placeholder="@UserName" />
+                <input type="password" placeholder="Password" />
+                
+
+                  
+                <button>Login</button>
+                <a href="#" id="showSignup">Don't have an account? Sign Up</a>
+                 
+            </div>
+            <!-- Signup Form -->
+            <div class="form-container signup">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="@UserName" />
+                <input type="text" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <form>
+                <a href="#" id="showLogin">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const card = document.getElementById('card');
+        const showSignup = document.getElementById('showSignup');
+        const showLogin = document.getElementById('showLogin');
+
+        showSignup.addEventListener('click', () => {
+            card.classList.add('flipped');
+        });
+
+        showLogin.addEventListener('click', () => {
+            card.classList.remove('flipped');
+        });
+    </script>
+</body>
+</html>

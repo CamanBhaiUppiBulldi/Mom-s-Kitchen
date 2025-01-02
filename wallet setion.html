@@ -1,0 +1,96 @@
+<link rel="shortcut icon" href="Mom_s_Kitchen__4_-removebg-preview.png" type="image/x-icon">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to bottom,  #ffd1dc, #b2f7ef);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #f4f1f2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .wallet-section {
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .wallet-balance {
+            font-size: 24px;
+            color: #f9e10d;
+        }
+        .home-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .home-btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Your Wallet</h2>
+        <div id="wallet-balance">Wallet: $0</div>
+    </header>
+    <div class="wallet-section">
+        <h1>Add Amount to Wallet</h1>
+        <input type="number" id="add-amount" placeholder="Enter amount" />
+        <button onclick="addToWallet()">Add Amount</button>
+        <br>
+        <button class="home-btn" onclick="goHome()">Back to Home</button>
+    </div>
+
+    <script>
+        // Display wallet balance on load
+        function updateWalletDisplay() {
+            const walletBalance = localStorage.getItem('walletBalance') || 0;
+            document.getElementById('wallet-balance').innerText = `Wallet: $${walletBalance}`;
+        }
+
+        // Add to wallet
+        function addToWallet() {
+            const addAmount = document.getElementById('add-amount').value;
+            if (!addAmount || addAmount <= 0) {
+                alert("Please enter a valid amount!");
+                return;
+            }
+            let walletBalance = parseFloat(localStorage.getItem('walletBalance')) || 0;
+            walletBalance += parseFloat(addAmount);
+            localStorage.setItem('walletBalance', walletBalance);
+            updateWalletDisplay();
+            alert(`$${addAmount} added to your wallet!`);
+            document.getElementById('add-amount').value = ''; // Clear input field
+        }
+
+        // Redirect to home page
+        function goHome() {
+            alert("Returning to Home...");
+            window.location.href = "index.html"; // Simulate returning to home
+
+        }
+
+        // Initialize wallet display on page load
+        updateWalletDisplay();
+    </script>
+</body>
+</html>

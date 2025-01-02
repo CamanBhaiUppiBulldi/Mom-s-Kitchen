@@ -1,0 +1,331 @@
+<link rel="shortcut icon" href="Mom_s_Kitchen__4_-removebg-preview.png" type="image/x-icon">
+
+<!--Team-->
+
+<div class="team">
+    <h1>Our<span>Team</span></h1>
+    <link rel="shortcut icon" href="Mom_s_Kitchen__4_-removebg-preview.png" type="image/x-icon">
+
+    <div class="team_box">
+        <div class="profile">
+            <img src="chef1.png">
+
+            <div class="info">
+                <h2 class="name">Chef :- Tom holland</h2>
+                <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile">
+            <img src="chef2.png">
+
+            <div class="info">
+                <h2 class="name">Chef :- Zendaya </h2>
+                <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile">
+            <img src="chef3.jpg">
+
+            <div class="info">
+                <h2 class="name">Chef :- Steve harrington</h2>
+                <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile">
+            <img src="chef4.jpg">
+
+            <div class="info">
+                <h2 class="name">Chef :- Vaibhav ponned</h2>
+                <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <div class="team_icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+ <!--Footer-->
+
+ <footer>
+    <div class="footer_main">
+
+        <div class="footer_tag">
+            <h2>Location</h2>
+            <p>Sri Lanka</p>
+            <p>USA</p>
+            <p>India</p>
+            <p>Japan</p>
+            <p>Italy</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Quick Link</h2>
+            <p>Home</p>
+            <p>About</p>
+            <p>Menu</p>
+            <p>Gallary</p>
+            <p>Order</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Contact</h2>
+            <p>+94 12 3456 789</p>
+            <p>+94 25 5568456</p>
+            <p>johndeo123@gmail.com</p>
+            <p>foodshop123@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Our Service</h2>
+            <p>Fast Delivery</p>
+            <p>Easy Payments</p>
+            <p>24 x 7 Service</p>
+        </div>
+
+        <div class="footer_tag">
+            <h2>Follows</h2>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+    </div>
+
+    <p class="end">Design by<span><i class="fa-solid fa-face-grin"></i> WT Master Code</span></p>
+
+</footer>
+
+</body>
+</html>
+<script type="module">
+
+// import navbar from './components/navbar.js';
+// let header = document.getElementById('header');
+// header.innerHTML = navbar();
+
+
+
+</script>
+<script src="./index.js"></script>
+<style>
+
+    /*Team*/
+
+.team{
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.team h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #fac031;
+    margin-bottom: 15px;
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fac031;
+}
+
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+  
+      border-radius: 15px;
+}
+.search {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whiteColor);
+    border-radius: 0px solid black;
+
+}
+</style>
+
